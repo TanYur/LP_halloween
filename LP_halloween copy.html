@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LP_halloween</title>
+    </head>
+
+    <body>
+        <div>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+                .halloween * {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .halloween {
+                    width: 1270px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    font-family: "Noto Sans", sans-serif;
+                }
+
+                .halloween-wrapper {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .wc-sr-only {
+                    position: absolute !important;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+
+                .halloween h2 {
+                    font-size: 48px;
+                    font-weight: 400;
+                    text-align: center;
+                    display: inline-flex;
+                    font-family: "Playfair Display", serif;
+                    letter-spacing: 1.5px;
+                }
+
+                .halloween h2 br {
+                    display: none;
+                }
+
+                .halloween-title img {
+                    width: 359px;
+                    max-width: 100%;
+                    height: auto;
+                    padding-top: 15px;
+                }
+
+                .halloween-btn {
+                    background-color: black;
+                    color: white;
+                    max-width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s linear;
+                }
+
+                .halloween-btn a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .halloween-btn:hover {
+                    background-color: #121212;
+                }
+
+                .halloween-btn span {
+                    color: #be5b22;
+                    padding-left: 8px;
+                }
+
+                @media (max-width:1270px) {
+                    .halloween h2 {
+                        font-size: 36px;
+                    }
+
+                    .halloween-title img {
+                        width: 240px;
+                    }
+                }
+
+                @media (max-width:1023px) {
+                    .halloween h2 {
+                        font-size: 26px;
+                    }
+
+                    .halloween-title img {
+                        width: 160px;
+                    }
+                }
+
+                @media (max-width:699px) {
+                    .halloween h2 {
+                        font-size: 30px;
+                        display: block;
+                    }
+
+                    .halloween h2 br {
+                        display: inherit;
+                    }
+
+                    .halloween-title img {
+                        width: 221px;
+                        margin: 10px auto 0;
+                        padding-left: 0;
+                    }
+
+                    .halloween-btn {
+                        width: 450px;
+                        margin: 0 auto;
+                    }
+                }
+
+                @media (max-width:389px) {
+                    .halloween h2 {
+                        font-size: 26px;
+                    }
+
+                    .halloween-btn {
+                        font-size: 14px;
+                    }
+                }
+            </style>
+
+            <!-- ============================ LP_halloween__section-01 image ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-01">
+                <div class="halloween-wrapper">
+                    <div class="section-01">
+                        <style>
+                            .section-01 {
+                                width: 100%;
+                                max-width: 100%;
+                                background-color: #F5F2ED;
+                                margin-top: 32px;
+                            }
+
+                            .section-01 img {
+                                width: 100%;
+                                height: auto;
+                                max-width: 100%;
+                            }
+                        </style>
+                        <h1 class="wc-sr-only">LP Halloween 🎃 (©)TY</h1>
+                        <a href="/">
+                            <picture>
+                                <source srcset="/LP-halloween/img/001.jpg"
+                                    media="(min-width: 700px)" width="1270" height="635">
+                                <source
+                                    srcset="/LP-halloween/img/002.jpg"
+                                    media="(min-width: 350px)" width="700" height="761">
+                                <img src="/LP-halloween/img/003.jpg"
+                                    alt="🎃" width="350" height="382" fetchpriority="high">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ============================ LP_halloween__section-02 icons ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-02">
+                <div class="halloween-wrapper">
+                    <div class="section-02">
+                        <style>
+                            .section-02 {
+                                background-color: #fff;
+                                width: 100%;
+                                max-width: 100%;
+                            }
+
+                            .section-02-des {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                max-width: 100%;
+                                padding: 30px 0;
+                            }
+
+                            .section-02-mob {
+                                display: none;
+                            }
+
+                            .section-02 .section-02-item {
+                                width: 100%;
+                                height: 100%;
+                                max-width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                         
+
+                            .section-02 .section-02-item p {
+                                font-size: 16px;
+                                line-height: 130%;
+                                margin-left: 22px;
+                            }
+
+                            .section-02 .pl-line {
+                                background-color: #be5b22;
+                                height: 60px;
+                                width: 2px;
+                                padding: 0 1px;
+                            }
+
+                            .section-02-btn {
+                                display: none;
+                            }
+
+                            @media (max-width:1269px) {
+                                .section-02-des {
+                                    padding: 20px 0;
+                                }
+
+                                .section-02 .section-02-item img {
+                                    width: 50px;
+                                }
+
+                                .section-02 .section-02-item p strong {
+                                    font-size: 18px;
+                                }
+
+                                .section-02 .section-02-item p {
+                                    font-size: 13px;
+                                    margin-left: 18px;
+                                }
+
+                                .section-02 .pl-line {
+                                    height: 55px;
+                                }
+                            }
+
+                            @media (max-width:1023px) {
+                                .section-02-des {
+                                    padding: 12px 0;
+                                }
+
+                                .section-02 .section-02-item img {
+                                    width: 50px;
+                                }
+
+                                .section-02 .section-02-item p strong {
+                                    font-size: 16px;
+                                }
+
+                                .section-02 .section-02-item p {
+                                    font-size: 12px;
+                                    margin-left: 12px;
+                                    letter-spacing: 1.5px;
+                                }
+
+                                .section-02 .pl-line {
+                                    height: 35px;
+                                }
+                            }
+
+                            @media (max-width:699px) {
+                                .section-02-des {
+                                    display: none;
+                                }
+
+                                .section-02-btn {
+                                    display: flex;
+                                    height: 50px;
+                                    margin-top: 20px;
+                                }
+
+                                .section-02-mob {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    width: 100%;
+                                    max-width: 100%;
+                                    padding: 15px 0;
+                                }
+
+                                .section-02-mob .section-02-mob-row {
+                                    display: flex;
+                                    width: 100%;
+                                    max-width: 450px;
+                                }
+
+                                .section-02 .section-02-item {
+                                    justify-content: start;
+                                    padding: 12px 1px 12px 8px;
+                                }
+
+                                .section-02 .section-02-item br {
+                                    display: none;
+                                }
+
+                                .section-02 .section-02-item p {
+                                    font-size: 12px;
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            @media (max-width:420px) {
+                                .section-02 .section-02-item p {
+                                    font-size: 11px;
+                                }
+                            }
+
+                            @media (max-width:389px) {
+                                .section-02 .section-02-item br {
+                                    display: inherit;
+                                }
+
+                                .section-02 .section-02-item p {
+                                    font-size: 12px;
+                                    margin-left: 12px;
+                                }
+                            }
+                        </style>
+
+                        <div class="section-02-des">
+                            <div class="section-02-item">
+                                <img src="/LP-halloween/img/pumpkin.svg" width="58"
+                                    alt="🎃">
+                                <p>Hallo🔥een</p>
+                            </div>
+                            <div class="pl-line"></div>
+                            <div class="section-02-item">
+                                <img src="/LP-halloween/img/castle.svg" width="58"
+                                    alt="🎃">
+                                <p>Hall🎃ween</p>
+                            </div>
+                            <div class="pl-line"></div>
+                            <div class="section-02-item">
+                                <img src="/LP-halloween/img/pumpkincandies.svg" width="58"
+                                    alt="🎃">
+                                <p>🏰alloween</p>
+                            </div>
+                            <div class="pl-line"></div>
+                            <div class="section-02-item">
+                                <img src="/LP-halloween/img/pot.svg" width="58"
+                                    alt="🎃">
+                                <p>Hall🕸️ween</p>
+                            </div>
+                        </div>
+
+                        <div class="section-02-mob">
+                            <div class="section-02-mob-row">
+                                <div class="section-02-item">
+                                    <img src="/LP-halloween/img/pumpkin.svg" width="32"
+                                        alt="🎃">
+                                     <p>Hallo🔥een</p>
+                                </div>
+                                <div class="section-02-item">
+                                    <img src="/LP-halloween/img/castle.svg" width="32"
+                                        alt="🎃">
+                                    <p>Hall🎃ween</p>
+                                </div>
+                            </div>
+                            <div class="section-02-mob-row">
+                                <div class="section-02-item">
+                                    <img src="/LP-halloween/img/pumpkincandies.svg" width="32"
+                                        alt="🎃">
+                                    <p>🏰alloween</p>
+                                </div>
+                                <div class="section-02-item">
+                                    <img src="/LP-halloween/img/pot.svg" width="32"
+                                        alt="🎃">
+                                    <p>Hall🕸️ween</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="halloween-btn section-02-btn">
+                        <a href="/">View 🔥 <span>⟶</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================ LP_halloween__section-03 ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-03">
+                <div class="halloween-wrapper">
+                    <div class="section-03">
+                        <style>
+                            .section-03-title {
+                                display: flex;
+                                justify-content: center;
+                                margin: 90px auto 70px;
+                            }
+
+                            .section-03-cadrs-des {
+                                width: 100%;
+                                max-width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                            }
+
+                            .section-03-card {
+                                width: 24%;
+                            }
+
+                            .section-03-card img {
+                                width: 100%;
+                                max-width: 100%;
+                                height: auto;
+                            }
+
+                            .section-03-slider {
+                                display: none;
+                            }
+
+                            @media (max-width:1270px) {
+                                .section-03-title {
+                                    margin: 70px auto 50px;
+                                }
+                            }
+
+                            @media (max-width:1023px) {
+                                .section-03-title {
+                                    margin: 50px 0 35px;
+                                }
+                            }
+
+                            @media (max-width:699px) {
+                                .section-03-cadrs-des {
+                                    display: none;
+                                }
+
+                                .section-03-slider {
+                                    display: block;
+                                    margin: 0 auto;
+                                    width: 100%;
+                                    max-width: 450px;
+                                    overflow: hidden;
+                                    position: relative;
+                                }
+
+                                .section-03-slider-wrapper {
+                                    display: flex;
+                                    width: 100%;
+                                    overflow: visible;
+                                    transition: transform 0.5s ease-in-out;
+                                }
+
+                                .section-03-item {
+                                    width: 100%;
+                                    flex: 0 0 100%;
+                                    min-width: 0;
+                                }
+
+                                .section-03-item img {
+                                    display: block;
+                                    width: 450px;
+                                    max-width: 100%;
+                                    height: auto;
+                                }
+
+                                .section-03-slider>.prev,
+                                .section-03-slider>.next {
+                                    position: absolute;
+                                    top: 40%;
+                                    background: transparent;
+                                    border: none;
+                                    padding: 10px;
+                                    cursor: pointer;
+                                    z-index: 2;
+                                }
+
+                                .section-03-slider>.prev span,
+                                .section-03-slider>.next span {
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    border-top: 2px solid #fff;
+                                    border-left: 2px solid #fff;
+                                }
+
+                                .section-03-slider>.prev {
+                                    left: 10px;
+                                    transform: translateY(-50%) rotate(315deg);
+                                }
+
+                                .section-03-slider>.next {
+                                    right: 10px;
+                                    transform: translateY(-50%) rotate(135deg);
+                                }
+
+                                .section-03-line {
+                                    width: 282px;
+                                    height: 4px;
+                                    max-width: 100%;
+                                    margin: 25px auto 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                }
+
+                                .section-03-line-item {
+                                    width: 56px;
+                                    height: 4px;
+                                    background-color: #ECECEC;
+                                    transition: background-color 0.3s ease;
+                                }
+
+                                .section-03-line-item.active {
+                                    background-color: #be5b22;
+                                }
+                            }
+                        </style>
+
+                        <div class="section-03-title">
+                            <h2>Hall🎃ween what is this?</h2>
+                        </div>
+
+                        <div class="section-03-cadrs-des">
+                            <div class="section-03-card">
+                                <img src="/LP-halloween/img/pumpkin-01.jpg" width="303"
+                                    alt="🎃" loading="lazy">
+                            </div>
+                            <div class="section-03-card">
+                                <img src="/LP-halloween/img/pumpkin-02.jpg" width="303"
+                                    alt="🎃" loading="lazy">
+                            </div>
+                            <div class="section-03-card">
+                                <img src="/LP-halloween/img/pumpkin-03.jpg" width="303"
+                                    alt="🎃" loading="lazy">
+                       
+                                </div>
+                            <div class="section-03-card">
+                                <img src="/LP-halloween/img/pumpkin-04.jpg" width="303"
+                                    alt="🎃" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="section-03-slider">
+                            <div class="section-03-slider-wrapper">
+                                <div class="section-03-item">
+                                    <img src="/LP-halloween/img/pumpkin-05.jpg"
+                                        width="350" alt="🎃" loading="lazy">
+                                </div>
+                                <div class="section-03-item">
+                                    <img src="/LP-halloween/img/pumpkin-06.jpg"
+                                        width="350" alt="🎃" loading="lazy">
+                                </div>
+                                <div class="section-03-item">
+                                    <img src="/LP-halloween/img/pumpkin-07.jpg"
+                                        width="350" alt="🎃" loading="lazy">
+                                </div>
+                                <div class="section-03-item">
+                                    <img src="/LP-halloween/img/pumpkin-08.jpg"
+                                        width="350" alt="🎃" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="section-03-line">
+                                <div class="section-03-line-item active"></div>
+                                <div class="section-03-line-item"></div>
+                                <div class="section-03-line-item"></div>
+                                <div class="section-03-line-item"></div>
+                            </div>
+                            <button class="prev" type="button" aria-label="Poprzedni slajd"><span></span></button>
+                            <button class="next" type="button" aria-label="Następny slajd"><span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================ LP_halloween__section-04 ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-04">
+                <style>
+                    .section-04 {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 0 40px;
+                    }
+
+                    .section-04-title {
+                        text-align: center;
+                        margin: 80px 0 100px;
+                        width: 572px;
+                        max-width: 100%;
+                    }
+
+                    .section-04-content {
+                        width: 1131px;
+                        max-width: 100%;
+                    }
+
+                    .section-04-content picture,
+                    .section-04-content img {
+                        display: block;
+                        max-width: 100%;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    @media (max-width:1270px) {
+                        .section-04-title {
+                            margin: 60px 0 80px;
+                            width: 400px;
+                        }
+                    }
+
+                    @media (max-width:1023px) {
+                        .section-04-title {
+                            margin: 30px 0 40px;
+                            width: 290px;
+                        }
+                    }
+
+                    @media (max-width:699px) {
+                        .section-04-title {
+                            margin: 50px 0 30px;
+                            width: 350px;
+                        }
+
+                        .section-04-content {
+                            width: 350px;
+                        }
+                    }
+                </style>
+                <div class="halloween-wrapper">
+                    <div class="section-04">
+                        <div class="section-04-title halloween-title">
+                            <h2>Ho🎃 it works
+                            </h2>
+                            <img src="/LP-halloween/img/haloween-logo.jpg" alt="🎃"
+                                    width="359" loading="lazy">
+                        </div>
+                        <div class="section-04-content">
+                            <picture>
+                                <source srcset="/LP-halloween/img/004.jpg"
+                                    media="(min-width: 700px)" width="1131" height="406">
+                                <source srcset="/LP-halloween/img/005.jpg"
+                                    media="(min-width: 350px)" width="350" height="580">
+                                <img src="/LP-halloween/img/005.jpg" alt="🎃"
+                                    width="350" height="580" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
