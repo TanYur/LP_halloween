@@ -656,6 +656,433 @@
                 </div>
             </div>
 
+             <!-- ============================ LP_halloween__section-05 ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-05">
+                <style>
+                    .section-05 {
+                        width: 100%;
+                        max-width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        background-color: #efefef;
+                        padding: 60px 0;
+                        margin-top: 100px;
+                    }
+
+                    .section-05-title {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .section-05-title br {
+                        display: none;
+                    }
+
+                    .section-05 p {
+                        font-size: 20px;
+                        line-height: 160%;
+                        text-align: center;
+                        display: inline-block;
+                        margin: 40px 0;
+                    }
+
+                    .section-05 p br {
+                        display: none;
+                    }
+
+                    .section-05-btn {
+                        margin: 0 auto;
+                        width: 247px;
+                        height: 50px;
+                        display: flex;
+                    }
+
+                    @media (max-width:699px) {
+                        .section-05 {
+                            padding: 40px 0 30px;
+                            margin-top: 40px;
+                        }
+
+                        .section-05 p {
+                            font-size: 14px;
+                            margin: 25px 0 20px;
+                        }
+
+                        .section-05-title br,
+                        .section-05 p br {
+                            display: inherit;
+                        }
+                    }
+                </style>
+                <div class="halloween-wrapper">
+                    <div class="section-05">
+                        <div class="section-05-title halloween-title">
+                            <h2>Join</h2>
+                            <img src="/LP-halloween/img/haloween-logo-02.jpg" alt="🎃"
+                                    width="359" loading="lazy">
+                        </div>
+                        <p>party</p>
+                        <div class="section-05-btn halloween-btn">
+                            <a href="/">join us 🎃<span>⟶</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- ============================ LP_halloween__section-11 + SKRYPTY ============================ -->
+            <div class="halloween" data-title="LP_halloween__section-11">
+                <div class="halloween-wrapper">
+                    <div class="pl-footer">
+                        <style>
+                            .pl-footer {
+                                width: 100%;
+                                max-width: 100%;
+                                margin-top: 98px;
+                            }
+
+                            .pl-footer hr {
+                                border: none;
+                                border-top: 1px solid #be5b22;
+                            }
+
+                            .pl-footer-link-wrapper {
+                                width: 700px;
+                                max-width: 100%;
+                                margin: 30px auto 60px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+
+                            .pl-footer-link-wrapper a {
+                                color: #121212;
+                                text-decoration: none;
+                                font-size: 16px;
+                            }
+
+                            .pl-footer-link-wrapper a:hover {
+                                text-decoration: underline;
+                            }
+
+                            @media (max-width:699px) {
+                                .pl-footer {
+                                    margin-top: 60px;
+                                }
+
+                                .pl-footer-link-wrapper {
+                                    margin: 20px auto 60px;
+                                    flex-direction: column;
+                                }
+
+                                .pl-footer-link-wrapper a {
+                                    display: inline-block;
+                                    margin-bottom: 25px;
+                                }
+                            }
+                        </style>
+                        <hr>
+                        <div class="pl-footer-link-wrapper">
+                            <a href="/regulamin">Regulamin</a>
+                            <a href="/polityka-prywatnosci">Polityka prywatności</a>
+                            <a href="/pl-PL/kontakt">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swipe + strzałki dla obu rotatorów mobile -->
+                <style>
+                    @media (max-width:699px) {
+
+                        .section-03-slider,
+                        .punkty-slider {
+                            touch-action: pan-y;
+                            -webkit-user-select: none;
+                            user-select: none;
+                        }
+
+                        .section-03-slider img,
+                        .punkty-slider img {
+                            -webkit-user-drag: none;
+                            pointer-events: none;
+                        }
+                    }
+                </style>
+                <script>
+                    (() => {
+                        'use strict';
+                        if (window.__wcSlidersInstalled) return;
+                        window.__wcSlidersInstalled = true;
+
+                        const CONFIGS = [{
+                                slider: '.section-03 .section-03-slider',
+                                track: '.section-03-slider-wrapper',
+                                item: '.section-03-item',
+                                dot: '.section-03-line-item',
+                                controls: (s) => s
+                            },
+                            {
+                                slider: '.punkty .punkty-slider',
+                                track: '.punkty-slider-wrapper',
+                                item: '.punkty-item',
+                                dot: '.punkty-line-item',
+                                controls: (s) => s.closest('.punkty-slider-container') || s
+                            }
+                        ];
+
+                        const SWIPE_RATIO = 0.15; // część szerokości slajdu wystarczająca do zmiany
+                        const LOCK_PX = 8; // po ilu px rozstrzygamy: swipe poziomy czy scroll strony
+
+                        function setupSlider(slider, cfg) {
+                            if (slider.dataset.wcSlider === '1') return;
+
+                            const track = slider.querySelector(cfg.track);
+                            const items = slider.querySelectorAll(cfg.item);
+                            const box = cfg.controls(slider);
+                            const prev = box.querySelector('.prev');
+                            const next = box.querySelector('.next');
+                            const dots = slider.querySelectorAll(cfg.dot);
+                            if (!track || !items.length) return;
+
+                            slider.dataset.wcSlider = '1';
+
+                            const count = items.length;
+                            let index = 0;
+
+                            function render(offsetPx) {
+                                const base = '-' + (index * 100) + '%';
+                                track.style.transform = offsetPx ?
+                                    'translateX(calc(' + base + ' + ' + offsetPx + 'px))' :
+                                    'translateX(' + base + ')';
+                            }
+
+                            function goTo(i) {
+                                index = (i + count) % count;
+                                track.style.transition = '';
+                                render(0);
+                                dots.forEach((d, n) => d.classList.toggle('active', n === index));
+                            }
+
+                            if (prev) prev.addEventListener('click', () => goTo(index - 1));
+                            if (next) next.addEventListener('click', () => goTo(index + 1));
+
+                            let startX = 0,
+                                startY = 0,
+                                dx = 0,
+                                axis = null,
+                                tracking = false;
+
+                            slider.addEventListener('touchstart', (e) => {
+                                if (e.touches.length !== 1) return;
+                                tracking = true;
+                                axis = null;
+                                dx = 0;
+                                startX = e.touches[0].clientX;
+                                startY = e.touches[0].clientY;
+                            }, {
+                                passive: true
+                            });
+
+                            slider.addEventListener('touchmove', (e) => {
+                                if (!tracking) return;
+                                const t = e.touches[0];
+                                const mx = t.clientX - startX;
+                                const my = t.clientY - startY;
+
+                                if (axis === null) {
+                                    if (Math.abs(mx) < LOCK_PX && Math.abs(my) < LOCK_PX) return;
+                                    axis = Math.abs(mx) > Math.abs(my) ? 'x' : 'y';
+                                    if (axis === 'x') track.style.transition = 'none';
+                                }
+                                if (axis !== 'x') return;
+
+                                e.preventDefault();
+                                const atEdge = (index === 0 && mx > 0) || (index === count - 1 && mx < 0);
+                                dx = atEdge ? mx / 3 : mx;
+                                render(dx);
+                            }, {
+                                passive: false
+                            });
+
+                            function end() {
+                                if (!tracking) return;
+                                tracking = false;
+                                if (axis !== 'x') return;
+                                const width = slider.clientWidth || 1;
+                                const atEdge = (index === 0 && dx > 0) || (index === count - 1 && dx < 0);
+                                if (!atEdge && Math.abs(dx) > width * SWIPE_RATIO) {
+                                    goTo(index + (dx < 0 ? 1 : -1));
+                                } else {
+                                    goTo(index);
+                                }
+                            }
+
+                            slider.addEventListener('touchend', end);
+                            slider.addEventListener('touchcancel', end);
+
+                            goTo(0);
+                        }
+
+                        function initAll() {
+                            CONFIGS.forEach((cfg) => {
+                                document.querySelectorAll(cfg.slider).forEach((s) => setupSlider(s, cfg));
+                            });
+                        }
+
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', initAll);
+                        } else {
+                            initAll();
+                        }
+
+                        // jeden observer na całą sesję SPA, z debounce do 1 klatki
+                        let queued = false;
+                        new MutationObserver(() => {
+                            if (queued) return;
+                            queued = true;
+                            requestAnimationFrame(() => {
+                                queued = false;
+                                initAll();
+                            });
+                        }).observe(document.documentElement, {
+                            childList: true,
+                            subtree: true
+                        });
+                    })();
+                </script>
+
+                <!-- Karty "Więcej informacji" (sekcja 08) -->
+                <script>
+                    (function () {
+                        'use strict';
+                        if (window.__wcBenefitsCardsInstalled) return;
+                        window.__wcBenefitsCardsInstalled = true;
+
+                        function closeCard(card) {
+                            card.classList.remove('card-text-visible');
+                            var hidden = card.querySelector('.card-text-hidden-wrapper');
+                            var btn = card.querySelector('.all-benefits-card-btn');
+                            if (hidden) hidden.style.maxHeight = '';
+                            if (btn) btn.setAttribute('aria-expanded', 'false');
+                        }
+
+                        function openCard(card) {
+                            var hidden = card.querySelector('.card-text-hidden-wrapper');
+                            var btn = card.querySelector('.all-benefits-card-btn');
+                            card.classList.add('card-text-visible');
+                            if (hidden) hidden.style.maxHeight = hidden.scrollHeight + 'px';
+                            if (btn) btn.setAttribute('aria-expanded', 'true');
+                        }
+
+                        // document.addEventListener('click', function (event) {
+                        //     var button = event.target.closest(
+                        //         '.wittchen-club .pl-all-benefits-card .all-benefits-card-btn');
+                        //     if (!button) return;
+
+                        //     var card = button.closest('.pl-all-benefits-card');
+                        //     var root = button.closest('.pl-all-benefits');
+                        //     if (!card || !root) return;
+
+                        //     var wasOpen = card.classList.contains('card-text-visible');
+                        //     root.querySelectorAll('.pl-all-benefits-card.card-text-visible').forEach(
+                        //         closeCard);
+                        //     if (!wasOpen) openCard(card);
+                        // });
+
+                        document.addEventListener('click', function (event) {
+                            var card = event.target.closest(
+                                '.wittchen-club .pl-all-benefits-card'
+                            );
+
+                            if (!card) return;
+
+                            var root = card.closest('.pl-all-benefits');
+                            if (!root) return;
+
+                            var wasOpen = card.classList.contains('card-text-visible');
+
+                            root.querySelectorAll(
+                                '.pl-all-benefits-card.card-text-visible'
+                            ).forEach(closeCard);
+
+                            if (!wasOpen) {
+                                openCard(card);
+                            }
+                        });
+
+                        var resizeTimer;
+                        window.addEventListener('resize', function () {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(function () {
+                                document.querySelectorAll(
+                                        '.pl-all-benefits-card.card-text-visible .card-text-hidden-wrapper'
+                                    )
+                                    .forEach(function (h) {
+                                        h.style.maxHeight = h.scrollHeight + 'px';
+                                    });
+                            }, 150);
+                        });
+                    })();
+                </script>
+
+                <!-- FAQ -->
+                <script>
+                    (function () {
+                        'use strict';
+                        if (window.__wcFaqInstalled) return;
+                        window.__wcFaqInstalled = true;
+
+                        function toggleItem(item) {
+                            var content = item.nextElementSibling;
+                            if (!content || !content.classList.contains('pl-faq-content')) return;
+
+                            var open = !item.classList.contains('is-active');
+                            item.classList.toggle('is-active', open);
+                            item.setAttribute('aria-expanded', open ? 'true' : 'false');
+                            content.style.maxHeight = open ? content.scrollHeight + 'px' : '';
+                        }
+
+                        document.addEventListener('click', function (event) {
+                            var t = event.target;
+                            if (!t || typeof t.closest !== 'function') return;
+
+                            var btn = t.closest('.wittchen-club .pl-faq-btn');
+                            if (btn) {
+                                var wrapper = btn.closest('.pl__faq-wrapper');
+                                if (wrapper) wrapper.classList.toggle('pl__faq-opened');
+                                return;
+                            }
+
+                            var item = t.closest('.wittchen-club .pl-faq-list-item');
+                            if (item) toggleItem(item);
+                        });
+
+                        document.addEventListener('keydown', function (event) {
+                            if (event.key !== 'Enter' && event.key !== ' ') return;
+                            var item = event.target.closest && event.target.closest(
+                                '.wittchen-club .pl-faq-list-item');
+                            if (!item) return;
+                            event.preventDefault();
+                            toggleItem(item);
+                        });
+
+                        var resizeTimer;
+                        window.addEventListener('resize', function () {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(function () {
+                                document.querySelectorAll(
+                                        '.wittchen-club .pl-faq-list-item.is-active')
+                                    .forEach(function (item) {
+                                        var c = item.nextElementSibling;
+                                        if (c) c.style.maxHeight = c.scrollHeight + 'px';
+                                    });
+                            }, 150);
+                        });
+                    })();
+                </script>
+            </div>
+
         </div>
 
     </body>
