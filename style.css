@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.halloween * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.halloween {
+    width: 1270px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.halloween-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.wc-sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.halloween h2 {
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    display: inline-flex;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1.5px;
+}
+
+.halloween h2 br {
+    display: none;
+}
+
+.halloween-title img {
+    width: 359px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+.halloween-btn {
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+.halloween-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.halloween-btn:hover {
+    background-color: #121212;
+}
+
+.halloween-btn span {
+    color: #be5b22;
+    padding-left: 8px;
+}
+
+@media (max-width:1270px) {
+    .halloween h2 {
+        font-size: 36px;
+    }
+
+    .halloween-title img {
+        width: 240px;
+    }
+}
+
+@media (max-width:1023px) {
+    .halloween h2 {
+        font-size: 26px;
+    }
+
+    .halloween-title img {
+        width: 160px;
+    }
+}
+
+@media (max-width:699px) {
+    .halloween h2 {
+        font-size: 30px;
+        display: block;
+    }
+
+    .halloween h2 br {
+        display: inherit;
+    }
+
+    .halloween-title img {
+        width: 221px;
+        margin: 10px auto 0;
+        padding-left: 0;
+    }
+
+    .halloween-btn {
+        width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:389px) {
+    .halloween h2 {
+        font-size: 26px;
+    }
+
+    .halloween-btn {
+        font-size: 14px;
+    }
+}
